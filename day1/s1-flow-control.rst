@@ -62,10 +62,10 @@ Rezolvă fiecare exercițiu într-un fișier separat.
 
 1. Afișează mesajul ``"Hello world"`` de 100 de ori.
 
-3. Pentru numerele de la 0 la 120, afișează câte un mesaj de forma
+2. Pentru numerele de la 0 la 120, afișează câte un mesaj de forma
    ``"Numarul X are N cifre."``
 
-2. Calculează `cmmdc
+3. Calculează `cmmdc
    <http://en.wikipedia.org/wiki/Monte_Carlo_method#Introduction>`_, `cmmmc
    <http://en.wikipedia.org/wiki/Monte_Carlo_method#Introduction>`_ al
    numerelor 2273321 și 4881557.
