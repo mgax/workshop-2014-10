@@ -35,7 +35,7 @@ Pentru operațiuni cu valori de timp, folosim biblioteca ``datetime``.
     from datetime import datetime, timedelta
     now = datetime.now()
     now_txt = now.strftime('%Y-%m-%d %H:%M:%S')
-    parsed = datetime.strptime('%Y-%m-%d %H:%M:%S')
+    parsed = datetime.strptime(now_txt, '%Y-%m-%d %H:%M:%S')
     parsed == now
 
     in_2_hrs = now + timedelta(hours=2)
