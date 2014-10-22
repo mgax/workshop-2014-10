@@ -44,25 +44,25 @@ Pentru operațiuni cu valori de timp, folosim biblioteca ``datetime``.
 Exerciții
 ---------
 
-0. Scrie un program care verifică dacă argumentul primit este o adresă de
+1. Scrie un program care verifică dacă argumentul primit este o adresă de
    mail plauzibilă (conține un caracter ``@`` și numele de domeniu conține o
    extensie între 2 și 4 caractere).
 
-0. Scrie un program care calculează data în care putem ridica un permis de
+2. Scrie un program care calculează data în care putem ridica un permis de
    conducere suspendat. Programul primește două argumente: data deciziei de
    suspendare în format ISO (dd-mm-yyyy) și numărul de zile de suspendare.
    Suspendarea propriu-zisă începe la 15 zile de la decizie.
 
-0. Scrie un program care calculează vârsta unui fișier, exprimată în zile,
+3. Scrie un program care calculează vârsta unui fișier, exprimată în zile,
    ore și minute.
 
-0. Scrie un program care crează un zip cu conținutul unui director. Folosește
+4. Scrie un program care crează un zip cu conținutul unui director. Folosește
    comanda externă ``zip``, chiar dacă există biblioteca `zipfile` în Python.
 
-0. Scrie un program care rulează comanda ``uptime``, preia output-ul, și
+5. Scrie un program care rulează comanda ``uptime``, preia output-ul, și
    extrage numărul de utilizatori și cele 3 valori pentru load average.
 
-0. Scrie un program care downloadează arhiva zip cu materialele de curs
+6. Scrie un program care downloadează arhiva zip cu materialele de curs
    (``https://github.com/mgax/workshop-2014-10/archive/master.zip``),
    folosind comanda ``curl``, cu opțiunile ``-O`` (salvează răspunsul într-un
    fișier) și ``-L`` (follow redirects). După aceea, programul trebuie să
