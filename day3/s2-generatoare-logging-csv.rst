@@ -1,3 +1,71 @@
+Iteratoare, generatoare
+-----------------------
+
+Iteratorul este un obiect care produce o serie de valori. Acestea pot să vină,
+de exemplu, dintr-o listă sau dintr-un fișier. Sunt utile atunci când vrem
+să prelucrăm seria element cu element. Bucla `for` parcurge, întotdeauna,
+un iterator.
+
+Putem construi un iterator printr-o expresie asemănătoare cu
+"list comprehension":
+
+.. code:: python
+
+    i = ("n=%d" % n for n in range(10))
+    for v in i:
+        print v
+
+Sau putem scrie o funcție "generator":
+
+.. code:: python
+
+    def gen():
+        for n in range(10):
+            yield "n=%d" % n
+
+    for v in gen():
+        print v
+
+
+Logging
+-------
+
+Python dispune de un sistem de logging în biblioteca standard.
+
+.. code:: python
+
+    import logging
+    logging.basicConfig()
+    logger = logging.getLogger('workshop')
+    logger.warn("hello %s!", "world")
+    try:
+        0 / 0
+    catch:
+        logger.exception("operation failed")
+
+
+CSV
+---
+
+Biblioteca ``csv`` ne ajută să citim și să generăm fișiere în format CSV
+și TSV.
+
+.. code:: python
+
+    import csv
+
+    with open('/tmp/workshop.csv', 'wb') as f:
+        writer = csv.writer(f)
+        writer.writerow(['n', 'n^3'])
+        for c in range(10):
+            writer.writerow([str(c), str(c ** 3)])
+
+    with open('/tmp/workshop.csv', 'rb') as f:
+        reader = csv.reader(f)
+        for line in reader:
+            print ', '.join(line)
+
+
 Exerciții
 ---------
 
