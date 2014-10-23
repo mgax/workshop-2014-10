@@ -20,7 +20,7 @@ pachetele downloadate într-un director local:
 .. code:: sh
 
     $ virtualenv ./venv --extra-search-dir=/path/to/dist
-    $ pip install pathlib -f file:///path/to/dist
+    $ pip install pathlib -f /path/to/dist
 
 Tot procesul de instalat uneltele de packaging este descris pe pagina
 https://python-packaging-user-guide.readthedocs.org/en/latest/current.html.
