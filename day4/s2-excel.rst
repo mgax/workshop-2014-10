@@ -1,3 +1,68 @@
+virtualenv, pip
+---------------
+
+Dacă avem nevoie de biblioteci în afara colecției de biblioteci standard,
+este recomandat să creem un `virtualenv
+<http://virtualenv.readthedocs.org/en/latest/>`_ specific proiectului, și să
+instalăm acolo pachetele, folosind `pip
+<http://pip.readthedocs.org/en/latest/>`_. Vom rula programele folosind
+executabilul ``python`` din virtualenv:
+
+.. code:: sh
+
+    $ virtualenv ./venv
+    $ ./venv/bin/pip install pathlib
+    $ ./venv/bin/python myscript.py
+
+
+openpyxl
+--------
+
+`openpyxl` este o bibliotecă cu care putem citi și modifica documente în
+format `xlsx` (Excel 2007).
+
+Citire din `xlsx`:
+
+.. code:: python
+
+    from openpyxl import load_workbook
+    wb = load_workbook('test.xlsx')
+
+    # listăm numele worksheet-urilor
+    print wb.get_sheet_names()
+
+    # deschidem un worksheet după nume
+    ws = wb.get_sheet_by_name('Sheet 1')
+
+    # citim valoarea unei celule
+    print ws['A1']
+
+
+Scriere în `xlsx`:
+
+.. code:: python
+
+    from openpyxl import Workbook
+    wb = Workbook()
+    ws = wb.active
+
+    # scriem într-o celulă
+    ws['A1'] = 42
+
+    # adăugăm un rând nou
+    ws.append([1, 2, 3])
+
+    # adăugăm o dată
+    import datetime
+    ws['A2'] = datetime.datetime.now()
+
+    # salvăm fișierul
+    wb.save("sample.xlsx")
+
+Pentru descrierea completă a funcționalităților, vezi `documentația pachetului
+openpyxl <https://openpyxl.readthedocs.org/en/latest/>`_.
+
+
 Exerciții
 ---------
 
