@@ -14,6 +14,14 @@ executabilul ``python`` din virtualenv:
     $ ./venv/bin/pip install pathlib
     $ ./venv/bin/python myscript.py
 
+Comenzile ``virtualenv`` și ``pip`` pot rula în mod offline dacă avem
+pachetele downloadate într-un director local:
+
+.. code:: sh
+
+    $ virtualenv ./venv --extra-search-dir=/path/to/dist
+    $ pip install pathlib -f file:///path/to/dist
+
 
 openpyxl
 --------
@@ -36,6 +44,10 @@ Citire din `xlsx`:
 
     # citim valoarea unei celule
     print ws['A1']
+
+    # iterăm prin rânduri
+    for row in ws.rows
+        print row
 
 
 Scriere în `xlsx`:
