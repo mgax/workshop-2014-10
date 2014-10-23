@@ -1,3 +1,30 @@
+Clase
+-----
+
+Clasele sunt folositoare când vrem să izolăm un anumit tip de informație
+(the state) și să o accesăm prin intermediul a câteva funcții (interfață,
+API).
+
+Funcțiile se numesc metode, și primesc, ca prim argument, obiectul curent
+``self``. La crearea unui obiect se apelează funcția ``__init__``.
+
+.. code:: python
+
+    class Person:
+
+        def __init__(self, name):
+            self.name = name
+
+        def greet(self, greeting="Hello"):
+            print "Hello, %s" % self.name
+
+    mihai = Person("Mihai")
+    mihai.greet()
+    # Hello, Mihai
+    mihai.greet("Hi")
+    # Hi, Mihai
+
+
 Exerciții
 ---------
 
