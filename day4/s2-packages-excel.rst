@@ -83,7 +83,8 @@ Exerciții
 
 1. Crează un `virtualenv` în home-ul tău. Instalează pachetul ``openpyxl``.
 
-2. Transformă un fișier `xlsx` în CSV folosind modulele `openpyxl` și `csv`.
+2. Transformă  fișierul `migrari.xlsx <./migrari.xlsx>`_ în CSV folosind
+   modulele `openpyxl` și `csv`.
 
 3. Generează un fișier `xlsx`, care să conțină o listă cu fișierele dintr-un
    director, împreună cu mărimea lor în bytes. Adaugă la sfârșit o celulă
