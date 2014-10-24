@@ -48,7 +48,8 @@ Exerciții
    .. code:: python
 
       resp = requests.get(url, stream=True)
-      f = resp.raw  # `f` este un fisier
+      for line in resp.iter_lines():
+          print line
 
 3. Descarcă informații despre un pachet de la `PyPI` folosind o adresă
    de forma ``https://pypi.python.org/pypi/{pachet}/json``. Interpretează
