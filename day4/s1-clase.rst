@@ -16,7 +16,7 @@ Funcțiile se numesc metode, și primesc, ca prim argument, obiectul curent
             self.name = name
 
         def greet(self, greeting="Hello"):
-            print "Hello, %s" % self.name
+            print "%s, %s" % (greeting, self.name)
 
     mihai = Person("Mihai")
     mihai.greet()
