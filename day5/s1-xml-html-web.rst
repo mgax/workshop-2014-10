@@ -1,7 +1,44 @@
+requests
+--------
+
+Putem accesa pagini de pe web cu biblioteca `requests`:
+
+.. code:: python
+
+    import requests
+    resp = requests.get('http://xkcd.com/')
+    print resp.content  # conținutul nemodificat
+    print resp.text  # conținutul, interpretat ca unicode
+
+
+lxml
+----
+
+Cu biblioteca `lxml` putem citi documente `xml` și le putem parcurge folosind
+`xpath`:
+
+.. code:: python
+
+    import requests, lxml.etree
+    resp = requests.get('http://xkcd.com/atom.xml')
+    doc = lxml.etree.fromstring(resp.content)
+    doc.xpath(...)
+
+Putem citi și documente `html`, unde avem, în plus, opțiunea să le parcurgem
+folosind selectori `css``:
+
+.. code:: python
+
+    import requests, lxml.html
+    resp = requests.get('https://pypi.python.org/pypi/pathlib')
+    doc = lxml.html.fromstring(resp.content)
+    doc.cssselect(...)
+
+
 Exerciții
 ---------
 
-1. Descarcă `acest feed RSS <http://xkcd.com/atom.xml>`_, folosind
+1. Descarcă `acest feed RSS <http://xkcd.com/rss.xml>`_, folosind
    biblioteca ``requests``, și extrage o listă cu articolele, fiecare
    articol având titlu și dată de publicare.
 
