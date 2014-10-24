@@ -43,7 +43,7 @@ Exerciții
    articol având titlu și dată de publicare.
 
 2. Descarcă `acest fișier CSV
-   <https://docs.google.com/spreadsheets/d/1tg6F9YUuXBe7avmvybSVDWxbh5t3m4xmUeQUOehp1P0/export?format=csv>`_ folosind biblioteca ``requests`` în modul `stream`:
+   <https://gist.githubusercontent.com/mgax/9a0c2cc94aa1564c4966/raw/f95717eeeea261958f95a0ca47206a795ed847f1/migrari.csv>`_ folosind biblioteca ``requests`` în modul `stream`:
 
    .. code:: python
 
